@@ -1,0 +1,276 @@
+/*grid set up*/
+
+* {
+    box-sizing: border-box;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 0.1em;
+/*    border: 1px solid red;*/
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*end of grid setup*/
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+#savings {
+  color:#409334;
+  font-size: 0.8em;
+}
+
+#voucher-discription {
+  color:#6bc060;
+  font-size:0.9em;
+}
+
+#product-box-discount{
+  text-decoration: line-through;
+  color:red;
+  font-weight: 700;
+  display: inline-block;
+  padding-right: 4%;
+}
+
+#product-box-price{
+  display: inline-block;
+}
+
+#product-box-name {
+  font-weight: 900;
+  font-size: 1em;
+  display: inline-block;
+}
+
+#product-box-colour {
+  padding-left: 4%;
+  font-size: 0.85em;
+  display: inline-block;
+}
+
+#product-box-cat {
+  padding-left: 3%;
+  font-size: 0.8em;
+  display: inline-block;
+}
+
+#product-box-price {
+  display: inline-block;
+}
+
+#product-box-quantity {
+  font-size: 0.85em;
+  display: inline-block;
+}
+
+#basket-list{
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+#basket-item {
+  padding:0.5em;
+  margin:1em;
+  background-color: #555555;
+}
+
+#basket-item-nodes {
+  flex-wrap: wrap;
+  display: inline-block;
+  text-align: center;
+}
+
+#basket-item-name {
+  color: white;
+  font-size: 1.3em;
+  font-weight: 500;
+  padding-right: 0.5em;
+}
+
+#basket-item-price {
+  color: white;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+#basket-item-cat {
+  color: #a5a5a5;
+  font-size: 0.9em;
+  font-weight: 100;
+  padding-left: 0.5em;
+}
+
+#total-box {
+  font-weight: 500;
+  font-size: 1.3em;
+  text-align: right;
+  margin-right: 8.5%;
+}
+
+#basket-item-colour {
+  color: #a5a5a5;
+  font-size: 0.9em;
+  font-weight: 100;
+}
+
+.basket-node {
+  display: inline-block;
+}
+
+#filter-options-container {
+  text-align: center;
+}
+
+.invalid-voucher-message-hide {
+  opacity: 0;
+  transition: opacity 700ms ease-in-out;
+  color:red;
+  vertical-align: text-bottom;
+  border: none;
+}
+
+.voucher-button{
+  margin-left: 1%;
+}
+
+.basket-button:hover {
+  font-weight: 900;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.basket-button {
+  background: url("images/basket.png");
+  background-size: cover;
+  height:3em;
+  width: 5em;
+  padding-top: 1.5em;
+  border: none;
+  outline:none;
+  color: white;
+}
+
+.filter-button {
+  position: relative;
+  top: 1.7em;
+  float: right;
+  border:none;
+  background: none;
+  font-weight: 800;
+}
+
+.filter-button:focus {
+  outline: none;
+  }
+
+.filter-button:hover {
+  color:gray;
+}
+
+.exitButton:hover{
+  font-weight: 500;
+}
+
+.exitButton {
+  float: right;
+  border:none;
+  background: none;
+  font-weight: 800;
+  outline:none;
+  color:white;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  margin-top: 0.1em !important;
+  margin-bottom: 0.3em !important;
+}
+
+#titlecontainer {
+  margin: 0 !important; 
+}
+
+.valid-voucher-message {
+  opacity: 1;
+  transition: opacity 700ms ease-in-out;
+  color:red;
+}
+
+#product-list {
+  flex-wrap: wrap;
+  display: inline-block;
+  text-align: center;
+}
+
+
+#basket-box-container{
+/*  border: 1px solid blue;*/
+  text-align: center;
+}
+
+#product-image {
+  width: 5em;
+  height: auto;
+}
+
+#product-box {
+  width: 15em;
+  min-height:8em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  display: inline-block;
+  background-color:#e4e4e4 ;
+/*  border: 1px solid black;*/
+}
+
+p {
+  margin: 0 !important;
+}
+
+
+#app-container {
+  padding-left:1em;
+  padding-right:1em;
+}
+
+#filter-button-container {
+  text-align: left;
+}
+
+#basket-button-container {
+  text-align: right;
+}
+
+.row.filter-options-hide {
+  max-height: 0;
+  overflow: hidden;
+/*  transition: max-height 3000ms ease-in-out;*/
+}
+
+.row.basket-container-hide {
+  max-height: 0;
+  overflow: hidden;
+/*  transition: max-height 3000ms ease-in-out;*/
+}
